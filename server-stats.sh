@@ -5,7 +5,7 @@ echo "Total CPU Usage:"
 top -bn1 | grep "Cpu(s)" | awk '{print "Used: " 100 - $8 "%"}'
 
 echo "Total Memory Usage:"
-free -m | awk 'NR==2{print "Used: %sMB / %sMB (%.2f%%)\n", $3, $2, $3*100/$2}'
+free -m | awk 'NR==2{printf "Used: %sMB / %sMB (%.2f%%)\n", $3, $2, $3*100/$2}'
 
 echo "Total Disk Usage:"
 df -h --total | grep total | awk '{print "Used: " $3 " / " $2 " (" $5 " used) "}'
@@ -26,4 +26,4 @@ echo "Logged In Users: $(who | wc -l)"
 echo "------------------------"
 
 echo "Failed Login Attempts: "
-lastb | head -n 5 2>/dev/null || echo"No failed login log found."
+lastb | head -n 5 2>/dev/null || echo "No failed login log found."
