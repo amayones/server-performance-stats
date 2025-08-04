@@ -3,7 +3,7 @@
 A shell script to monitor server performance metrics including CPU, memory, disk usage, and running processes.
 
 ## Project URL
-https://github.com/YOUR_USERNAME/server-performance-stats
+https://roadmap.sh/projects/server-stats
 
 ## Features
 
